@@ -86,6 +86,9 @@ form.addEventListener("submit", (e) => {
             Number(monthInput.value) - 1,
             Number(dayInput.value)
         );
+        document.querySelector(".input__day").value = "";
+        document.querySelector(".input__month").value = "";
+        document.querySelector(".input__year").value = "";
         const timeDiff = new Date() - inputDate;
         const ageDate = new Date(timeDiff);
         const ageYear = ageDate.getUTCFullYear() - 1970;
