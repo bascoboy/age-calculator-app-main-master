@@ -55,7 +55,4 @@ Users should be able to:
 
 ## Author
 
-- Website - [Rocky Barua](https://rockybarua.netlify.app)
-- Frontend Mentor - [@Drougnov](https://www.frontendmentor.io/profile/Drougnov)
-- Twitter - [@itz_rocky_barua](https://twitter.com/itz_rocky_barua)
-- LinkedIn - [Rocky (Biplob) BARUA](https://www.linkedin.com/in/rockybarua)
+- Website - OLA
