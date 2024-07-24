@@ -5,29 +5,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>age-calculator-app-main</title>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Link to external CSS animation library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
+    <!-- Preloader container -->
     <div id="preloader">
+        <!-- Spinner element inside preloader -->
         <div class="spinner"></div>
     </div>
+    <!-- Main container -->
     <main>
+        <!-- Form for inputting birth date -->
         <form action="#">
             <div class="input-container">
+                <!-- Day input field -->
                 <div class="input-field">
                     <lable class="label">Day</lable>
                     <input type="number" placeholder="DD" class="input__day input" />
                     <span class="empty">This field is required</span>
                     <span class="invalid">Must be a valid day</span>
                 </div>
+                <!-- Month input field -->
                 <div class="input-field">
                     <lable class="label">Month</lable>
                     <input type="number" placeholder="MM" class="input__month input" />
                     <span class="empty">This field is required</span>
                     <span class="invalid">Must be a valid month</span>
                 </div>
+                <!-- Year input field -->
                 <div class="input-field">
                     <lable class="label">Year</lable>
                     <input type="number" placeholder="YYYY" class="input__year input" />
@@ -35,10 +44,12 @@
                     <span class="invalid invalid-year">Must be in the past</span>
                 </div>
             </div>
+            <!-- Submit button -->
             <button type="submit" aria-label="submit form" class="submit-btn">
                 <img src="./assets/images/icon-arrow.svg" alt="" />
             </button>
         </form>
+        <!-- Age display section -->
         <section class="age-container">
             <h1 class="age">
                 <span class="age__year">- -</span> years
@@ -49,6 +60,7 @@
             </h1>
         </section>
     </main>
+    <!-- JavaScript for form validation and age calculation -->
     <script src="app.js" defer></script>
 </body>
 

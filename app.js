@@ -1,4 +1,4 @@
-//Show error messages based on value
+// Show error messages based on value
 const validateInput = (input, validator) => {
     if (input.value === "") {
         input.parentElement.classList.remove("invalid-value");
@@ -15,13 +15,13 @@ const validateInput = (input, validator) => {
     }
 };
 
+// Event listener for page load to hide preloader
 window.addEventListener('load', function () {
     const preloader = document.getElementById('preloader');
     preloader.style.display = 'none';
 });
 
-
-//Check if the values are valid
+// Check if the values are valid
 const isDayValid = (day, month, year) => {
     const leapYear = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
     const maxDays = [
@@ -54,10 +54,10 @@ const isYearValid = (year) => {
     }
 
     const currentYear = new Date().getFullYear();
-    return Number.isInteger(year) && year >= 1971 && year <= currentYear; //1970 = unix ephoc
+    return Number.isInteger(year) && year >= 1971 && year <= currentYear; //1970 = unix epoch
 };
 
-//handle submit
+// Handle form submission
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -80,7 +80,7 @@ form.addEventListener("submit", (e) => {
     );
 
     if (isDayInputValid && isMonthInputValid && isYearInputValid) {
-        //format the value into date
+        // Format the value into date
         const inputDate = new Date(
             Number(yearInput.value),
             Number(monthInput.value) - 1,
@@ -92,7 +92,7 @@ form.addEventListener("submit", (e) => {
         const ageMonth = ageDate.getUTCMonth();
         const ageDay = ageDate.getUTCDate() - 1;
 
-        //counter animation
+        // Counter animation
         const dayElement = document.querySelector(".age__day");
         const monthElement = document.querySelector(".age__month");
         const yearElement = document.querySelector(".age__year");
